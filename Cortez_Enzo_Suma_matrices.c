@@ -29,3 +29,13 @@ void sumarMatrices(int m, int n, int matrizA[m][n], int matrizB[m][n], int matri
         }
     }
 }
+
+/*Impresion en pantalla de las matrices*/
+void imprimirMatriz(int m, int n, int matriz[m][n]) {
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            printf(" %d ", matriz[i][j]);
+        }
+        printf("\n");
+    }
+}
