@@ -42,3 +42,21 @@ void imprimirMatrices(int m, int n, int l, int matriz[l][m][n]) {
         printf("\n"); // Nueva línea para separar las matrices
     }
 }
+
+// Función principal
+int main() {
+    int m, n, l;
+
+    // Llamada a la función para solicitar las dimensiones de las matrices
+    solicitarDimensiones(&m, &n, &l);
+
+    int matrizA[l][m][n]; // Definición de la matriz tridimensional
+
+    // Llamada a la función para inicializar las matrices
+    inicializarMatrices(m, n, l, matrizA);
+
+    // Llamada a la función para imprimir las matrices
+    imprimirMatrices(m, n, l, matrizA);
+
+    return 0; // Fin del programa
+}
