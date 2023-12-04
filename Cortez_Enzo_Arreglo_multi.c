@@ -28,3 +28,17 @@ void inicializarMatrices(int m, int n, int l, int matriz[l][m][n]) {
         }
     }
 }
+
+// Función para imprimir las matrices en la consola
+void imprimirMatrices(int m, int n, int l, int matriz[l][m][n]) {
+    for (int k = 0; k < l; k++) {
+        printf("Matriz %d:\n", k + 1);
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                printf("%d ", matriz[k][i][j]); // Imprime los elementos de la matriz
+            }
+            printf("\n"); // Nueva línea para separar las filas de la matriz
+        }
+        printf("\n"); // Nueva línea para separar las matrices
+    }
+}
