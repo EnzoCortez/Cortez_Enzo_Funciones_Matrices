@@ -13,3 +13,18 @@ void solicitarDimensiones(int *m, int *n, int *l) {
     printf("Ingrese el número de columnas: ");
     scanf("%d", n);
 }
+
+// Función para inicializar las matrices según las dimensiones dadas
+void inicializarMatrices(int m, int n, int l, int matriz[l][m][n]) {
+    for (int k = 0; k < l; k++) {
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (k == l - 1) {
+                    matriz[k][i][j] = 1; // Última matriz llena de unos
+                } else {
+                    matriz[k][i][j] = 0; // Resto de matrices llenas de ceros
+                }
+            }
+        }
+    }
+}
