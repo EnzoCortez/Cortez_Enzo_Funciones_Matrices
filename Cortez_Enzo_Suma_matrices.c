@@ -39,3 +39,30 @@ void imprimirMatriz(int m, int n, int matriz[m][n]) {
         printf("\n");
     }
 }
+
+/*IInicializacion del programa principal*/
+int main() {
+    int m, n;
+
+    solicitarDimensiones(&m, &n);
+
+    int matrizA[m][n];
+    int matrizB[m][n];
+    int matrizC[m][n];
+
+    generarMatriz(m, n, matrizA);
+    generarMatriz(m, n, matrizB);
+
+    sumarMatrices(m, n, matrizA, matrizB, matrizC);
+
+    printf("\nMatriz A:\n");
+    imprimirMatriz(m, n, matrizA);
+
+    printf("\nMatriz B:\n");
+    imprimirMatriz(m, n, matrizB);
+
+    printf("\nMatriz C (Suma de A y B):\n");
+    imprimirMatriz(m, n, matrizC);
+
+    return 0;
+}
